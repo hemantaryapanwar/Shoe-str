@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-o9+ikrj&=3p0c2c-gj0kz&k4nx00u4v#b8thu%x*a#+&^)+(%)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    
+    'heli-store.herokuapp.com'
+]
 
 
 # Application definition
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,9 +127,11 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 #added mannualy
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
+if DEBUG:
+         STATICFILES_DIRS = [
+         BASE_DIR / "static",
     
 ]
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+else :
+        DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+        STATIC_ROOT = BASE_DIR/'static'
