@@ -5,4 +5,4 @@ This is a ecommerce shoe Store build on django Frame work by using python,Html,c
 
 ![](https://raw.github.com/hemantaryapanwar/Shoe-str/main/screenshots/Screenshot(20).png)
 
-![Alt text](/../<branch name>/main/screenshots/Screenshot(20).png?raw=true "Optional Title")
+![Alt text](https://raw.github.com/hemantaryapanwar/Shoe-str/main/screenshots/Screenshot(20).png?raw=true "Optional Title")
